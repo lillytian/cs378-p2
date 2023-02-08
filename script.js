@@ -5,13 +5,13 @@ let tacoAmount = document.getElementById('taco-amt');
 let enchiladaAmount = document.getElementById('enchilada-amt');
 let totalAmount = document.getElementById('total-amt');
 
-// buttons for increasing food
+// buttons for decreasing food
 let decrButtons = document.getElementsByClassName('btn-quantity-decr');
 for (let btn of decrButtons) {
     btn.addEventListener('click', decrementQuantity);
 }
 
-// buttons for decreasing food
+// buttons for increasing food
 let incrButtons = document.getElementsByClassName('btn-quantity-incr');
 for (let btn of incrButtons) {
     btn.addEventListener('click', incrementQuantity);
@@ -25,6 +25,7 @@ clearAllBtn.addEventListener('click', clearAllQuantity)
 let orderBtn = document.getElementById('order');
 orderBtn.addEventListener('click', onOrderHandle);
 
+// handles decreasing the quantity of an item
 function decrementQuantity() {
     let id = this.id;
     let elem;
@@ -49,6 +50,7 @@ function decrementQuantity() {
     }
 }
 
+// handles increasing the quantity of an item
 function incrementQuantity() {
     let id = this.id;
     let elem;
@@ -68,6 +70,7 @@ function incrementQuantity() {
     editSubtotal(id.split('-')[0], true);
 }
 
+// clears quantity of all items
 function clearAllQuantity() {
     let items = document.getElementsByClassName('quantity-amt');
     for (let item of items) {
@@ -76,6 +79,7 @@ function clearAllQuantity() {
     totalAmount.innerHTML = 0;
 }
 
+// recalculates subtotal price
 function editSubtotal(item, incr) {
     let price = document.getElementById(`${item}-price`);
     let currTotal = parseInt(totalAmount.innerHTML);
@@ -89,6 +93,7 @@ function editSubtotal(item, incr) {
     totalAmount.innerHTML = currTotal;
 }
 
+// displays alert once order button is pressed
 function onOrderHandle() {
     if (parseInt(totalAmount.innerHTML) === 0) {
         alert("No items in cart.")
