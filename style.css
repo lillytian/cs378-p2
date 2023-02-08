@@ -46,9 +46,44 @@ h3 {
     text-align: end;
 }
 
+.subtotal-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.subtotal-section span {
+    font-size: 18px;
+}
+
 .btn-order {
     background-color: #B1CAEC;
     border-radius: 500px;
     border: solid 1px black;
     color: black;
+    width: 100%;
+}
+
+.btn-clear-all {
+    background-color: lightgray;
+    border-radius: 500px;
+    border: solid 1px black;
+    color: black;
+    width: 100%;
+}
+
+.order-quantity {
+    text-align: end;
+}
+
+.btn-quantity {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px black;
+    color: black;
+}
+
+.quantity-amt {
+    margin-left: 4px;
+    margin-right: 4px;
 }

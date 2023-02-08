@@ -36,12 +36,14 @@
                   <h3>mac & cheese</h3>
                 </div>
                 <div class="col-3 justify-content-end align-self-center">
-                  <p class="price">$5</p>
+                  <p class="price">$<span id="mac-price">5</span></p>
                 </div>
               </div>
               <div class="row format-item-row">
-                <div class="col align-self-center">
-                  <button type="button" class="btn btn-primary btn-order">order</button>
+                <div class="col align-self-center order-quantity">
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-decr" id="mac-decr">-</button>
+                  <span class="quantity-amt" id="mac-amt">0</span>
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-incr" id="mac-incr">+</button>
                 </div>
               </div>
             </div>
@@ -58,12 +60,14 @@
                   <h3>pasta</h3>
                 </div>
                 <div class="col-3 justify-content-end align-self-center">
-                  <p class="price">$8</p>
+                  <p class="price">$<span id="pasta-price">8</span></p>
                 </div>
               </div>
               <div class="row format-item-row">
-                <div class="col align-self-center">
-                  <button type="button" class="btn btn-primary btn-order">order</button>
+                <div class="col align-self-center order-quantity">
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-decr" id="pasta-decr">-</button>
+                  <span class="quantity-amt" id="pasta-amt">0</span>
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-incr" id="pasta-incr">+</button>
                 </div>
               </div>
             </div>
@@ -80,12 +84,14 @@
                   <h3>tacos</h3>
                 </div>
                 <div class="col-3 justify-content-end align-self-center">
-                  <p class="price">$8</p>
+                  <p class="price">$<span id="taco-price">8</span></p>
                 </div>
               </div>
               <div class="row format-item-row">
-                <div class="col align-self-center">
-                  <button type="button" class="btn btn-primary btn-order">order</button>
+                <div class="col align-self-center order-quantity">
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-decr" id="taco-decr">-</button>
+                  <span class="quantity-amt" id="taco-amt">0</span>
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-incr" id="taco-incr">+</button>
                 </div>
               </div>
             </div>
@@ -102,19 +108,34 @@
                   <h3>enchilada</h3>
                 </div>
                 <div class="col-3 justify-content-end align-self-center">
-                  <p class="price">$10</p>
+                  <p class="price">$<span id="enchilada-price">10</span></p>
                 </div>
               </div>
               <div class="row format-item-row">
-                <div class="col align-self-center">
-                  <button type="button" class="btn btn-primary btn-order">order</button>
+                <div class="col align-self-center order-quantity">
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-decr" id="enchilada-decr">-</button>
+                  <span class="quantity-amt" id="enchilada-amt">0</span>
+                  <button type="button" class="btn btn-primary btn-quantity btn-quantity-incr" id="enchilada-incr">+</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Subtotal -->
+      <div class="row subtotal-section">
+        <div class="col-5 align-self-center">
+          Subtotal $<span id="total-amt">0</span>
+        </div>
+        <div class="col-3">
+          <button type="button" class="btn btn-primary btn-order" id="order">Order</button>
+        </div>
+        <div class="col-4">
+          <button type="button" class="btn btn-primary btn-clear-all" id="clear-all">Clear all</button>
+        </div>
+      </div>
     </div>
-    
+    <script src="script.js"></script>
   </body>
 </html>
